@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body
+    class="m-0 p-xl-5 overflow-x-hidden"
+    style="background-color: #cf8f7a; max-height: 100vh"
+  >
+    <div
+      class="container d-flex g-0"
+      style="height: 50rem; background: #e8e8e9"
+    >
+      <!-- form left side -->
+      <div
+        class="h-100 w-50 p-5 d-flex flex-column justify-content-between"
+        style="
+          background-image: url(./Untitled\ design.png);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      >
+        <div>
+          <h5 style="color: #e8e8e9" class="opacity-75 mx-5">
+            <img
+              src="./icons8-octaedro-50.png"
+              alt="logo"
+              style="
+                filter: invert(0%) sepia(0%) saturate(1%) hue-rotate(0deg)
+                  brightness(100%) contrast(0%);
+                width: 2.5rem;
+              "
+            />
+            glassmoon
+          </h5>
+          <h1 class="fw-bold p-5" style="font-size: 4rem; color: #e8e8e9">
+            We'd love to hear from you
+          </h1>
+        </div>
+
+        <div>
+          <p style="color: #e8e8e9" class="text-center opacity-50">
+            Privacy Policy | Modern Day Statement | Social Impect Statement
+          </p>
+        </div>
+      </div>
+      <!-- form right side  -->
+      <div class="p-5 mx-5 d-flex flex-column justify-content-between">
+        <nav>
+          <ul class="d-flex align-items-center gap-5 justify-content-end">
+            <li class="list-unstyled">About</li>
+            <li class="list-unstyled">Services</li>
+            <li
+              class="list-unstyled px-3 py-2 rounded-1 custom-class"
+              style="border: 2px solid #00000070; cursor: pointer"
+            >
+              Contact us
+            </li>
+          </ul>
+        </nav>
+
+        <h2>Contact us</h2>
+        <form class="d-flex flex-column gap-5 mt-5">
+          <div class="d-flex align-items-center justify-content-between gap-4">
+            <div class="d-flex flex-column">
+              <label for="firstName">FIRST NAME</label>
+              <input
+                class="border-0 bg-transparent border-bottom border-2 border-black border-opacity-10"
+                type="text"
+                name="fname"
+                id="firstName"
+                placeholder="Akhilesh"
+              />
+            </div>
+            <div class="d-flex flex-column">
+              <label for="lastName">LAST NAME</label>
+              <input
+                class="border-0 bg-transparent border-bottom border-2 border-black border-opacity-10"
+                type="text"
+                name="lname"
+                id="lastName"
+                placeholder="Maurya"
+              />
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between gap-4">
+            <div class="d-flex flex-column">
+              <label for="email">EMAIL</label>
+              <input
+                class="border-0 bg-transparent border-bottom border-2 border-black border-opacity-10"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="fake@fake.com"
+              />
+            </div>
+            <div class="d-flex flex-column">
+              <label for="phoneNumber">PHONE NUMBER</label>
+              <input
+                class="border-0 bg-transparent border-bottom border-2 border-black border-opacity-10"
+                type="tel"
+                name="phone"
+                id="phoneNumber"
+                placeholder="12345 54321"
+              />
+            </div>
+          </div>
+
+          <div class="d-flex flex-column">
+            <label for="message">MESSAGE</label>
+            <textarea
+              class="border-0 bg-transparent border-bottom border-2 border-black border-opacity-10"
+              name="message"
+              id="message"
+              placeholder="Design is greate..."
+              style="resize: none; height: 2.3rem"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="border-0 align-self-start fs-6 bg-transparent icon-link icon-link-hover link-dark"
+          >
+            Submit &rarr;
+          </button>
+        </form>
+
+        <div class="d-flex flex-column mt-5 opacity-75">
+          <span>EMAIL US</span>
+          <a
+            href="mailto:fake@fake.com"
+            class="text-black text-decoration-none mt-2"
+            target="_blank"
+            >fake@fake.com</a
+          >
+        </div>
+
+        <!-- social links -->
+        <div class="mt-3">
+          <ul class="d-flex align-items-center justify-content-end gap-3">
+            <li class="list-unstyled">
+              <a href="https://instagram.com/" class="opacity-75"
+                ><box-icon type="logo" name="instagram-alt"></box-icon
+              ></a>
+            </li>
+            <li class="list-unstyled">
+              <a href="https://dribbble.com/" class="opacity-75">
+                <box-icon name="dribbble" type="logo"></box-icon>
+              </a>
+            </li>
+            <li class="list-unstyled">
+              <a href="https://twitter.com/" class="opacity-75"
+                ><box-icon name="twitter" type="logo"></box-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <!-- icon fonts -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
+
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover {
+  border-bottom-color: #919191 !important;
+}
+
+button,
+box-icon {
+  transition: 0.3s;
+}
+button:hover {
+  opacity: 0.7;
+}
+
+box-icon:hover {
+  transform: translateY(-0.5rem);
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+.custom-class:hover {
+  background-color: #dadada;
+}

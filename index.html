@@ -43,13 +43,14 @@
                 width: 2.5rem;
               "
             />
+
             glassmoon
           </h5>
           <h1 class="fw-bold p-5" style="font-size: 4rem; color: #e8e8e9">
             We'd love to hear from you
           </h1>
         </div>
-
+        <!-- glass footer -->
         <div>
           <p style="color: #e8e8e9" class="text-center opacity-50">
             Privacy Policy | Modern Day Statement | Social Impect Statement
@@ -72,10 +73,16 @@
         </nav>
 
         <h2>Contact us</h2>
-        <form class="d-flex flex-column gap-5 mt-5">
-          <div class="d-flex align-items-center justify-content-between gap-4">
+        <form
+          class="d-flex flex-column gap-5 mt-5"
+          onsubmit="return validateFrom()"
+        >
+          <div
+            class="d-flex align-items-center justify-content-between gap-4"
+            id="username"
+          >
             <div class="d-flex flex-column">
-              <label for="firstName">FIRST NAME</label>
+              <label for="firstName">FIRST NAME </label>
               <input
                 class="border-0 bg-transparent border-bottom border-2 border-black border-opacity-10"
                 type="text"
@@ -83,6 +90,7 @@
                 id="firstName"
                 placeholder="Akhilesh"
               />
+              <span id="Fname" class="text-danger font-weight-bold"></span>
             </div>
             <div class="d-flex flex-column">
               <label for="lastName">LAST NAME</label>
@@ -93,6 +101,7 @@
                 id="lastName"
                 placeholder="Maurya"
               />
+              <span id="Lname" class="text-danger font-weight-bold"></span>
             </div>
           </div>
 
@@ -106,6 +115,7 @@
                 id="email"
                 placeholder="fake@fake.com"
               />
+              <span id="EEmail" class="text-danger font-weight-bold"></span>
             </div>
             <div class="d-flex flex-column">
               <label for="phoneNumber">PHONE NUMBER</label>
@@ -116,6 +126,7 @@
                 id="phoneNumber"
                 placeholder="12345 54321"
               />
+              <span id="PNumber" class="text-danger font-weight-bold"></span>
             </div>
           </div>
 
@@ -128,6 +139,7 @@
               placeholder="Design is greate..."
               style="resize: none; height: 2.3rem"
             ></textarea>
+            <span id="Tmessage" class="text-danger font-weight-bold"></span>
           </div>
 
           <button
@@ -139,7 +151,7 @@
         </form>
 
         <div class="d-flex flex-column mt-5 opacity-75">
-          <span>EMAIL US</span>
+          <span id="email">EMAIL US</span>
           <a
             href="mailto:fake@fake.com"
             class="text-black text-decoration-none mt-2"
@@ -182,5 +194,56 @@
     ></script>
     <!-- icon fonts -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+      function validateFrom() {
+        var First = document.getElementById("firstName").value;
+        var Last = document.getElementById("lastName").value;
+        var Email = document.getElementById("email").value;
+        var PHONE = document.getElementById("phoneNumber").value;
+        var msg = document.getElementById("message").value;
+
+        var usercheck = /^[A-Za-z. ]{3,30}$/;
+        var emailcheck = /^[A-Za-z_0-9]{3,}@[A-Za-z.]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+        var passwordcheck =
+          /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,16}$/;
+        var Mobilecheck = /^[9876][0-9]{9}$/;
+        var MassageCheck = /^^[A-Za-z. 0-9 -]{3,1000}$/;
+
+        if (usercheck.test(First)) {
+          document.getElementById("Fname").innerHTML = "";
+        } else {
+          document.getElementById("Fname").innerHTML =
+            "** Enter min three Character A-z not any Number";
+          return false;
+        }
+        if (usercheck.test(Last)) {
+          document.getElementById("Lname").innerHTML = "";
+        } else {
+          document.getElementById("Lname").innerHTML =
+            "** Enter min three Character A-z not any Number";
+          return false;
+        }
+        if (emailcheck.test(Email)) {
+          document.getElementById("EEmail").innerHTML = "";
+        } else {
+          document.getElementById("EEmail").innerHTML =
+            "** Enter abc@gmail.com";
+          return false;
+        }
+        if (Mobilecheck.test(PHONE)) {
+          document.getElementById("PNumber").innerHTML = "";
+        } else {
+          document.getElementById("PNumber").innerHTML =
+            "** Enter A-z ,one number, One Special Character and 8-16 value ";
+          return false;
+        }
+        if (MassageCheck.test(msg)) {
+          document.getElementById("Tmessage").innerHTML = "";
+        } else {
+          document.getElementById("Tmessage").innerHTML = "Enter valid Name";
+          return false;
+        }
+      }
+    </script>
   </body>
 </html>
